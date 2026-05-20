@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(rgb(0, 0, 0), rgb(30, 37, 54));
+            padding: 20px 40px;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: all 0.4s ease;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #3498db;
+            transform: translateY(-3px);
+        }
+        .hero {
+            height: 150px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url(ink.gif);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: rgb(52, 113, 188);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-image img {
+            display: block;
+            transition: all 0.3s ease-out;
+        }
+
+        .hero-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            padding: 50px 30px;
+            background-color: #f8f9fa;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            box-shadow: 0 20px 30px rgba(52, 152, 219, 0.3);
+        }
+
+        .product-img {
+            width: 100%;
+            max-width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: all 0.3s ease-out;
+        }
+
+        .product-img:hover {
+            transform: scale(1.05);
+        }
+
+        .product-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .product-price {
+            font-size: 1.2rem;
+            color: #3498db;
+            font-weight: bold;
+        }
+
+        .product-desc {
+            font-size: 0.85rem;
+            color: #666;
+            line-height: 1.4;
+            text-align: center;
+        }
+
+        footer {
+            background: linear-gradient(rgb(30, 53, 77), rgb(36, 40, 58));
+            color: white;
+            padding: 40px 30px 25px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.6rem;
+            margin: 0 12px;
+            transition: all 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            color: #3498db;
+            transform: translateY(-4px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                max-width: 90%;
+            }
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+                max-width: 95%;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="https://i.ibb.co/yBKwDpLT/image.png" height="45px"></div>
+        <nav>
+            <a href="assignment1.html">Home</a>
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-image">
+            <img src="https://i.ibb.co/DgKPwjKf/image.png" height="65px" width="auto">
+        </div>
+    </section>
+
+    <section class="product-grid">
+        <div class="product-card">
+            <img class="product-img" src="https://jacksonskate.com/cdn/shop/products/JS150_-_No_Shadow_d2ee53f2-c33b-4120-a164-220772b7f75b_1024x1024.jpg?v=1622229017" >
+            <div class="product-name">Figure Skates Pro</div>
+            <div class="product-price">$249.99</div>
+            <div class="product-desc">Professional figure skates with premium leather and stainless steel blades</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://img.alicdn.com/imgextra/i1/2208303707200/O1CN010w8vKO233eHp1nhgq_!!2208303707200.png_800x800.jpg" >
+            <div class="product-name">Skating Dress</div>
+            <div class="product-price">$89.99</div>
+            <div class="product-desc">Elegant figure skating dress with sequins and mesh details</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://m.media-amazon.com/images/I/71SGNAgp8DL.jpg">
+            <div class="product-name">Replacement Blades</div>
+            <div class="product-price">$79.99</div>
+            <div class="product-desc">High-carbon stainless steel blades for professional skaters</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://i5.walmartimages.com/seo/Eight-Ball-Park-New-Skateboarding-and-Bike-Helmet-for-Children-Teens-Adults-Carbon_d9996bd2-0746-4719-8cf7-b23dcc3419ee.c99f512a040c455b36636c67f68ff7c8.jpeg">
+            <div class="product-name">Skating Helmet</div>
+            <div class="product-price">$59.99</div>
+            <div class="product-desc">Certified protective helmet for ice skating safety</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://ae01.alicdn.com/kf/HTB1yy.xQVXXXXaPXXXXq6xXFXXXf/HOT-6pcs-set-Skating-Protective-Gear-Set-Elbow-pads-Bicycle-Skateboard-Ice-Skate-Roller-Knee-Protector.jpg">
+            <div class="product-name">Protective Gear Set</div>
+            <div class="product-price">$44.99</div>
+            <div class="product-desc">Knee and elbow pads for beginner skaters</div>
+        </div>
+        
+        <div class="product-card">
+            <img class="product-img" src="https://www.wheelsonheels.co.uk/cdn/shop/files/5.6aquasilverspray.jpg?v=1699636333&width=1635">
+            <div class="product-name">Skate Carrier Bag</div>
+            <div class="product-price">$34.99</div>
+            <div class="product-desc">Durable padded bag to carry and protect your skates</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-left">
+                <p><strong>Contact Us</strong></p>
+                <p>Email: skateoasis@iceskating.com</p>
+                <p>Phone: +965 1234 5678</p>
+                <p>Location: Marina Mall, Kuwait</p>
+            </div>
+
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p> Skate Oasis • All Rights Reserved</p>
+        </div>
+    </footer>
+
+</body>
+</html>
